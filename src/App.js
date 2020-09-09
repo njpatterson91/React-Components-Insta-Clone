@@ -9,7 +9,6 @@ import React, { useState } from "react";
 // Import the Posts (plural!) and SearchBar components, since they are used inside App component
 // Import the dummyData
 import "./App.css";
-import Post from "./components/Posts/Post";
 import Posts from "./components/Posts/Posts";
 import dummyData from "./dummy-data";
 import SearchBar from "./components/SearchBar/SearchBar";
@@ -34,7 +33,7 @@ const App = () => {
 
     setPosts(
       posts.map((ps) => {
-        if (postId == ps.id) {
+        if (postId === ps.id) {
           console.log("yeet");
           return { ...ps, likes: ps.likes + 1 };
         }
